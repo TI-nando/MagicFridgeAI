@@ -1,6 +1,4 @@
 package dev.java10x.MagicFridgeAI.controller;
-
-import dev.java10x.MagicFridgeAI.model.FoodItem;
 import dev.java10x.MagicFridgeAI.service.GeminiService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +14,7 @@ public class RecipeController {
         this.geminiService = geminiService;
     }
 
-    @GetMapping
+    @GetMapping("/generate")
     public Mono<ResponseEntity<String>> generatRecipe() {
         return geminiService.generateRecipe();
     }
