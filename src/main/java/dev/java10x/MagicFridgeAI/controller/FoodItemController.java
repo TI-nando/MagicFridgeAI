@@ -27,7 +27,7 @@ public class FoodItemController {
     //Get - Listar todos
     @GetMapping
     public ResponseEntity<List<FoodItem>> listarTodos() {
-        List<FoodItem> listar = service.listar();
+        List<FoodItem> listar = service.listarTodos();
         return ResponseEntity.ok(listar); // Retorna status 200 ok
     }
 

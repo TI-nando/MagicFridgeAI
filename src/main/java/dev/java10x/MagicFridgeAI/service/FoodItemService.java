@@ -20,7 +20,7 @@ public class FoodItemService {
         return repository.save(fooditem);
     }
 
-    public List<FoodItem> listar() {
+    public List<FoodItem> listarTodos() {
         return repository.findAll();
     }
 
