@@ -11,7 +11,7 @@ public class WebClientConfig {
     private String geminiIa;
 
     @Bean
-    public WebClient webClient( WebClient.Builder builder) {
-        return builder.baseUrl(geminiIa).build();
+    public WebClient webClient() {
+        return WebClient.builder().baseUrl(geminiIa).build();
     }
 }
